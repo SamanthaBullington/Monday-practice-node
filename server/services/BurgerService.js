@@ -15,7 +15,7 @@ class BurgerService {
   }
 
   create(body) {
-    FakeBurgerDb.burger.push(body)
+    FakeBurgerDb.burgers.push(body)
     return body
   }
 
@@ -23,7 +23,7 @@ class BurgerService {
     let old = this.getById(body.id)
     old = { ...old, ...body }
     this.delete(old.id)
-    FakeBurgerDb.burger.push(old)
+    FakeBurgerDb.burgers.push(old)
     return old
   }
 
