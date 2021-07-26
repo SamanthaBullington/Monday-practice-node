@@ -5,9 +5,10 @@ class BurgerService {
   getAll() {
     return FakeBurgerDb.burgers
   }
+
   getById(id) {
     const burger = FakeBurgerDb.burgers.find(b => b.id.toString() === id)
-    if (!knight) {
+    if (!burger) {
       throw new BadRequest('Invalid Knight ID')
     }
     return burger

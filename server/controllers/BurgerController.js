@@ -5,11 +5,11 @@ export class BurgerController extends BaseController {
   constructor() {
     super('api/burgers')
     this.router
-    .get('', this.getAll)
-    .get('/:id', this.getById)
-    .post('', this.create)
-    .put('/:id', this.edit)
-    .delete('/:id', this.delete)
+      .get('', this.getAll)
+      .get('/:id', this.getById)
+      .post('', this.create)
+      .put('/:id', this.edit)
+      .delete('/:id', this.delete)
   }
 
   getAll(req, res, next) {
@@ -20,9 +20,10 @@ export class BurgerController extends BaseController {
       next(error)
     }
   }
+
   getById(req, res, next) {
     try {
-      const burger = burgeerService.getById(req.params.id)
+      const burger = burgerService.getById(req.params.id)
       res.send(burger)
     } catch (error) {
       next(error)
