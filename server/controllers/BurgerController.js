@@ -32,7 +32,7 @@ export class BurgerController extends BaseController {
 
   create(req, res, next) {
     try {
-      const burger = burgerService.burgercreate(req.body)
+      const burger = burgerService.create(req.body)
       res.send(burger)
     } catch (error) {
       next(error)

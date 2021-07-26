@@ -9,7 +9,7 @@ class BurgerService {
   getById(id) {
     const burger = FakeBurgerDb.burgers.find(b => b.id.toString() === id)
     if (!burger) {
-      throw new BadRequest('Invalid Knight ID')
+      throw new BadRequest('Invalid burger ID')
     }
     return burger
   }
